@@ -11,6 +11,8 @@ location=~/Snapshots/docs/Bootstrap
 download() {
     rm -rf ~/Snapshots/docs/Bootstrap
     git clone https://github.com/twbs/bootstrap.git $location;
+    go_to_location;
+    rm -rf .git;
     give_space;
     echo "Do you want to setup bootstrap now? [y/N]";
 
@@ -21,7 +23,6 @@ download() {
       exit
     fi
 }
-
 setup() {
   echo "Setting up Bootstrap docs";
   go_to_location;
